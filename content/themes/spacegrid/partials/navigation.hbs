@@ -1,0 +1,21 @@
+{{!< default}}
+
+<div class="navbar">
+    <img src="{{@blog.logo}}" class="logo"/>
+    <p class="logo-text"><a href="{{@blog.url}}"><span id="bold"></span><span id="not-bold"></span></a></p>
+    <ul>
+        <li><a href="{{twitter_url}}" class="social"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="{{facebook_url}}" class="social"><i class="fa fa-facebook"></i></a></li>
+    </ul>
+</div>
+
+<script>
+    var title = "{{@blog.title}}";
+    var words = title.split(" ");
+    if (words.length == 2) {
+        document.getElementById('bold').innerHTML = words[0];
+        document.getElementById('not-bold').innerHTML = words[1];
+    } else {
+        document.getElementById('bold').innerHTML = "{{@blog.title}}";
+    }
+</script>

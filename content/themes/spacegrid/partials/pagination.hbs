@@ -1,0 +1,8 @@
+{{!< default}}
+<nav class="pagination">
+    <p class=".code-text">
+        {{#if prev}}<a href="{{page_url prev}}"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;</a>{{/if}}
+        Page {{page}}
+        {{#if next}}<a href="{{page_url next}}">&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></a>{{/if}}
+    </p>
+</nav>
